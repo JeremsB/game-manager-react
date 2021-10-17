@@ -1,10 +1,11 @@
 import {GET_GAMES} from '../types'
 
 const initialState = {
-    users:[],
+    games:[],
     loading:true
 }
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default function(state = initialState, action){
 
     switch(action.type){

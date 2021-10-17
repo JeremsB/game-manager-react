@@ -11,20 +11,23 @@ function App(props) {
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(getGames());
-    }, []);
+    }, [dispatch]);
 
   return (
     <div className="App">
-      <header className="App-header">
-        <GameCard
-            title={"Hades"}
-            console={"Switch"}
-            picture={"https://image.api.playstation.com/vulcan/ap/rnd/202104/0517/9AcM3vy5t77zPiJyKHwRfnNT.png"}
-            category={"Roguelike"}
-            description={"Hades est un rogue-like et dungeon crawler qui associe le meilleur des titres de Supergiant " +
-            "salués par la critique."}
-        />
-      </header>
+      <div className="mx-40 py-5">
+        <div className="grid grid-cols-4 gap-4">
+            {games.games.map((game) => (
+            <GameCard
+                title={game.name}
+                console={game.console}
+                picture={game.picture}
+                category={"Roguelike"}
+                description={game.description}
+            />
+            ))}
+        </div>
+      </div>
     </div>
   );
 }
