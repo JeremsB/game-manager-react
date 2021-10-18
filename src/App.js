@@ -20,9 +20,9 @@ function App(props) {
             {games.games.map((game) => (
             <GameCard
                 title={game.name}
-                console={game.console}
+                console={game.gameConsole.label}
                 picture={game.picture}
-                category={"Roguelike"}
+                category={game.gameCategory.label}
                 description={game.description}
             />
             ))}
