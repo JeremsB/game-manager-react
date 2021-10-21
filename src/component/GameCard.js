@@ -1,4 +1,3 @@
-
 function GameCard(props){
     return(
         <div className="flex justify-between shadow-xl m-4">

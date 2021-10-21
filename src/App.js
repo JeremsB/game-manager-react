@@ -1,35 +1,22 @@
 import './App.css';
-import GameCard from "./component/GameCard";
-import {useEffect} from "react";
-import {getGames} from "./store/actions/gamesAction";
-import {useDispatch, useSelector} from "react-redux";
+import {BrowserRouter as Router, Route} from "react-router-dom";
+import React from "react";
+import AddGame from "./pages/AddGame";
+import Games from "./pages/Games";
+import Home from "./pages/Home";
 
-
-function App(props) {
-
-    const games = useSelector(state => state.games);
-    const dispatch = useDispatch();
-    useEffect(() => {
-        dispatch(getGames());
-    }, [dispatch]);
+function App() {
 
   return (
     <div className="App">
-      <div className="mx-40 py-5">
-        <div className="grid grid-cols-4 gap-4">
-            {games.games.map((game) => (
-            <GameCard
-                title={game.name}
-                console={game.gameConsole.label}
-                picture={game.picture}
-                category={game.gameCategory.label}
-                description={game.description}
-            />
-            ))}
-        </div>
-      </div>
+        <Router>
+            <Route exact path='/' component={Home}/>
+            <Route exact path='/add' component={AddGame}/>
+            <Route exact path='/games' component={Games}/>
+        </Router>
     </div>
   );
+
 }
 
 export default App

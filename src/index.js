@@ -9,7 +9,9 @@ import store from "./store/store";
 ReactDOM.render(
   <React.StrictMode>
       <Provider store={store}>
-      <App />
+          <div className="mx-80 py-5">
+              <App/>
+          </div>
       </Provider>
   </React.StrictMode>,
   document.getElementById('root')
