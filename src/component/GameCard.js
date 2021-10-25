@@ -19,7 +19,7 @@ function GameCard(props){
                 </div>
                 <div className="py-2 px-4">
                     <h1 className="text-xl font-medium leading-6 tracking-wide text-gray-300 hover:text-blue-500 cursor-pointer">
-                        <a href="#">{props.title}</a>
+                        <a href={`/article/${props.id}`}>{props.title}</a>
                     </h1>
                 </div>
                 <div className="px-4 pb-4 space-y-2">

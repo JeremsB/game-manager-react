@@ -3,9 +3,6 @@ import {useEffect} from "react";
 import {getGames} from "../store/actions/gamesAction";
 import {useDispatch, useSelector} from "react-redux";
 
-import { Fab } from '@mui/material';
-import AddIcon from '@mui/icons-material/Add';
-
 function Games(props) {
 
     const games = useSelector(state => state.games);
@@ -19,6 +16,7 @@ function Games(props) {
             <div className="grid grid-cols-4 gap-4">
                 {games.games.map((game) => (
                     <GameCard
+                        id={game.id}
                         title={game.name}
                         console={game.gameConsole.label}
                         picture={game.picture}
@@ -27,9 +25,6 @@ function Games(props) {
                     />
                 ))}
             </div>
-            <Fab color="primary" aria-label="add">
-                <AddIcon />
-            </Fab>
         </div>
     );
 
