@@ -1,6 +1,10 @@
 import { combineReducers } from 'redux'
-import gameReducer from './gamesReducer'
+import gamesReducer from './gamesReducer'
+import categoriesReducer from "./categoriesReducer";
+import consolesReducer from "./consolesReducer";
 
 export default combineReducers({
-    games: gameReducer
+    games: gamesReducer,
+    categories: categoriesReducer,
+    consoles: consolesReducer
 })

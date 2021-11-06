@@ -1,2 +1,6 @@
 export const GET_GAMES = 'GET_GAMES';
-export const GAMES_ERROR = 'GAMES_ERROR'
+export const GAMES_ERROR = 'GAMES_ERROR';
+export const GET_CATEGORIES = 'GET_CATEGORIES';
+export const CATEGORIES_ERROR = 'CATEGORIES_ERROR';
+export const GET_CONSOLES = 'GET_CONSOLES';
+export const CONSOLES_ERROR = 'CONSOLES_ERROR';
